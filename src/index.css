@@ -1,0 +1,76 @@
+/* Import Modern Typography (Google Fonts) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+
+@import "tailwindcss";
+
+
+:root {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Outfit', system-ui, sans-serif;
+  
+  --color-brand-yellow: #F5C518;
+  --color-brand-yellow-hover: #F0B90B;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #070708;
+  color: #d4d4d8;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #0f0f11;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #f5c518;
+}
+
+/* Hide scrollbars but allow scrolling */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Gold neon glows */
+.glow-yellow {
+  box-shadow: 0 0 15px rgba(245, 197, 24, 0.15);
+}
+
+.glow-yellow-lg {
+  box-shadow: 0 0 25px rgba(245, 197, 24, 0.25);
+}
+
+/* Glowing text keyframe animation */
+@keyframes neonPulse {
+  0%, 100% {
+    text-shadow: 0 0 4px rgba(245, 197, 24, 0.3), 0 0 10px rgba(245, 197, 24, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(245, 197, 24, 0.6), 0 0 20px rgba(245, 197, 24, 0.4);
+  }
+}
+
+.animate-neon-text {
+  animation: neonPulse 3s infinite ease-in-out;
+}
