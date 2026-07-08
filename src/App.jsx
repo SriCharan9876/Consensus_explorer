@@ -12,8 +12,10 @@ import {
   FaExchangeAlt,
   FaLayerGroup,
   FaBalanceScale,
-  FaTh
+  FaTh,
+  FaUsers
 } from "react-icons/fa";
+import AboutSection from "./components/AboutSection";
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("home");
@@ -126,6 +128,8 @@ export default function App() {
             <ComparisonTable />
           </div>
         );
+      case "about":
+        return <AboutSection />;
       default:
         return null;
     }
@@ -164,7 +168,8 @@ export default function App() {
             { id: "explorer", label: "Explorer", icon: <FaCube /> },
             { id: "compare", label: "Compare", icon: <FaExchangeAlt /> },
             { id: "languages", label: "Languages", icon: <FaLayerGroup /> },
-            { id: "analytics", label: "Analytics", icon: <FaTh /> }
+            { id: "analytics", label: "Analytics", icon: <FaTh /> },
+            { id: "about", label: "About", icon: <FaUsers /> }
           ].map((tab) => {
             const isActive = activeTab === tab.id;
             return (
