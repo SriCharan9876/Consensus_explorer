@@ -462,9 +462,9 @@ export default function ConsensusExplorer() {
                   <p className="text-[10px] text-zinc-400">Weighted scores (0-100)</p>
                 </div>
 
-                <div className="w-full h-[180px] flex items-center justify-center">
+                <div className="w-full h-[220px] flex items-center justify-center">
                   <ResponsiveContainer width="100%" height="100%">
-                    <RadarChart cx="50%" cy="50%" outerRadius="80%" data={radarData}>
+                    <RadarChart cx="50%" cy="50%" outerRadius="60%" data={radarData} margin={{ top: 10, right: 30, bottom: 10, left: 30 }}>
                       <PolarGrid stroke="#27272a" />
                       <PolarAngleAxis
                         dataKey="subject"
